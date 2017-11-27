@@ -1,0 +1,71 @@
+@charset "utf-8";
+/*---------通用----------*/
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.inline-bloc
+.k{
+    display: inline-block;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.relative{
+    position: relative;
+}
+
+/*--------------*/
+.gradesearch{
+    margin: 5px 1% 0px 0px;
+}
+.shujutow{
+    width: 215px;
+    border-radius: 3px;
+    background-color: #D0D0D0;
+    height: 215px;
+    overflow: hidden;
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 30px
+}
+.shujutow dl{
+    padding: 10px 0 0 35px;
+    line-height: 33px;
+    color: #fff
+}
+.shujutow dt{
+    font-weight: 400
+}
+.shujutow ul{
+    background: #c7c7c7 ;
+    height: 100px
+}
+.shujutow h2{
+    font-size: 50px;
+    line-height: 85px;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    margin-left: 50px
+}
+.shujutow li{
+    float: left;
+    line-height: 16px;
+    list-style-type: none;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 47px
+}
+
+.navnnn{
+    width: 220px;
+    height: 100%;
+    background: #eaffea;
+}
+.search{margin-top: 20px}

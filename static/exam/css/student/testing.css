@@ -1,0 +1,179 @@
+@charset "utf-8";
+/*<!-- customer styles -->*/
+ .edui-toolbar {
+     line-height: 20px;
+ }
+
+video {
+    width: 50%;
+    display: block;
+    margin-left: 50px;
+}
+
+.answers a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+
+.pop-test3 span {
+    font-size: 24px;
+}
+
+.modal-dialog {
+    width: 350px;
+}
+
+.modal-header {
+    background-color: #5d9cec;
+    color: #fff;
+    font-size: 16px;
+    margin: 0px !important;
+    padding: 10px 25px !important;
+    text-align: center;
+}
+
+.alert-danger {
+    position: fixed;
+    width: 60%;
+    z-index: 1000;
+    top: 40%;
+    left: 20%;
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #ff5800;
+    border-color: #fd8100;
+}
+
+.tip {
+    position: absolute;
+}
+
+.expanding, .expanding-clone {
+    width: 500px !important;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+#copy {
+    display: inline-block;
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+    color: #333;
+    cursor: pointer;
+    background-color: #eee;
+    border: 1.5px dashed #777;
+    border-radius: 6px;
+    vertical-align: 5px;
+}
+
+audio {
+    margin: 0 0 -10px 0;
+}
+
+.questions dl {
+    padding: 30px;
+}
+
+.edui-default .edui-editor-toolbarbox {
+    position: relative !important;
+}
+
+.edui-editor div {
+    height: auto !important;
+}
+
+#webcam {
+    position: fixed;
+    z-index: 9999;
+}
+
+#webcam .glyphicon-remove {
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    border: 2px solid #5d9cec;
+    color: #5d9cec;
+    padding: 2px;
+    margin: 3px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#cams, #loading {
+    position: fixed;
+    z-index: 9998;
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#cams span {
+    display: inline-block !important;
+}
+
+.capture-status {
+    font-size: 1.3em;
+    color: #ff5800;
+    margin-left: 150px;
+    opacity: 0;
+    /*filter: opacity(alpha=0);*/
+    cursor: pointer;
+}
+
+.bootstrap-dialog {
+    z-index: 100000001;
+}
+
+[title_tip]:hover:after {
+    content: attr(title_tip);
+    padding: 5px 10px;
+    line-height: 18px;
+    text-align: left;
+    width: 80px !important;
+    margin: 15px 5px;
+    color: #fff;
+    position: absolute;
+    z-index: 20;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    -webkit-box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 4px #222;
+    background-color: #444;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+span.ch, .en {
+    cursor: pointer;
+}
+
+span.devid {
+    color: #f7f7f7;
+}
+
+div#swichLang {
+    position: absolute;
+    right: 205px;
+    top: 28px;
+}
+
+.ch {
+    color: #ff5800;
+}
+
+.en {
+    color: #f7f7f7;
+}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*---------------通用------------------*/
+header,section{
+    display: block;
+}
+.fl{
+    float: left;
+}
+.clear{
+    content: "";
+    display: block;
+}
+/*-----------导航-----------*/
+.nav{
+    height:800px ;
+    width: 15%;
+}
+.nav-ul{
+    font:18px "微软雅黑";
+}
+.change:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 46px;
+    background: #34A0CE;
+    opacity:1;
+    transition: all .3s;
+}
+/*-----------顶部-------------*/
+.right{
+    width: 85%;
+}
+.top,.content{
+    width: 100%;
+}
+.top{
+    border-bottom:5px solid darkslategray;
+}
+.user{
+    float: right;
+    font:18px "微软雅黑";
+}

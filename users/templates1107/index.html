@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/static/css/nav.css">              <!--导航样式-->
+    <link rel="stylesheet" href="/static/icon-font/iconfont.css">  <!--字体图标-->
+    <link rel="stylesheet" href="/static/font/iconfont.css">
+    <link rel="stylesheet" href="/static/css/frame.css">            <!--框架样式-->
+</head>
+<body>
+    <div class="container clear" >
+        <div class="nav left fl">
+            <div class="nav-top">
+                <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="/static/images/mini.png" ></div>
+            </div>
+            <ul class="nav-ul">
+            </ul>
+        </div>
+        <div class="fl right">
+            <header >
+                <div class="top user">
+                    用户名：{{ user_role }}
+                </div>
+            </header>
+            <section class="content" id="content"></section>
+        </div>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/nav.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script>
+
+        var userRole1={{ user_role |safe }};
+         console.log("type:"+typeof userRole1);
+        console.log("----:"+userRole1);
+    </script>
+</body>
+</html>
+
+

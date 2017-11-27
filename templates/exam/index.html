@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load staticfiles%}
+
+<html>
+<head>
+<meta charset="utf-8">
+    <title>{% block title %}首页{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'exam/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'exam/css/nav.css' %}">              <!--导航样式-->
+    <link rel="stylesheet" href="{% static 'exam/icon-font/iconfont.css' %}">  <!--字体图标-->
+    <link rel="stylesheet" href="{% static 'exam/font/iconfont.css' %}">
+    <link rel="stylesheet" href="{% static 'exam/css/frame.css' %}">            <!--框架样式-->
+
+     <!-- Bootstrap -->
+    <link href="{% static 'exam/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--试题库样式-->
+    <link href="{% static 'exam/css/teacher/itemBank.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'exam/css/student/grade-search.css' %}">
+
+</head>
+{% block body %}
+<body>
+    <div class="clear" >
+        {% block nav %}
+        <div class="nav left fl">
+            <div class="nav-top">
+                <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="{% static 'exam/images/mini.png' %}" ></div>
+            </div>
+            <ul class="nav-ul">
+            </ul>
+        </div>
+        {% endblock %}
+        <div class="fl right">
+            {% block header %}
+            <header >
+                <div class="top user">
+                    用户名：{% firstof user.username %}
+                </div>
+            </header>
+            {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    {% block js %}
+    <script type="text/javascript">
+        var userRole=["{% firstof user.role %}"];
+//        var userRole={{ userRole |safe }};
+    </script>
+    <script type="text/javascript" src="{% static 'exam/js/jquery.min.js' %}"></script>
+    <script src="{% static 'exam/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'exam/js/nav.js' %}"></script>
+    <script type="text/javascript" src="{% static 'exam/js/index.js' %}"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+    <script src="{% static 'exam/js/item-bank.js' %}"></script>
+    <script src="{% static 'exam/js/grade-count.js}"></script>
+    {% endblock %}
+</body>
+{% endblock %}
+</html>
+
+
