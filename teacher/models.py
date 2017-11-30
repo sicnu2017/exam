@@ -78,3 +78,5 @@ class MchoiceProfile(models.Model):
 #
 #     def __str__(self):
 #         return self.subject
+
+#ceshi20171130
