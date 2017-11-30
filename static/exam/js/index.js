@@ -46,7 +46,7 @@ $(".nav-ul a").click(function(e){
     //     $("#content").html(response);
     // });
     $.ajax({
-        url: "/login/"+url,
+        url: "/"+url,
         global: false,
         type: "POST",
         dataType: "html",

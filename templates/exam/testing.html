@@ -1,3 +1,4 @@
+{% load staticfiles%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,66 +10,20 @@
 <meta name="renderer" content="webkit">
 <meta name="description" content="">
 <meta name="author" content="">
+
 <!-- Le styles -->
-<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/student/testing/uploadify.css">
-<link rel="stylesheet" type="text/css" href="css/student/testing/style.css">
-<link rel="stylesheet" type="text/css" href="css/student/testing.css">
+<link rel="stylesheet" type="text/css" href="{% static 'exam/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'exam/css/student/testing/uploadify.css' %}">
+<link rel="stylesheet" type="text/css" href=" {% static 'exam/css/student/testing/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'exam/css/student/testing.css' %}">
 <!--<link rel="stylesheet" type="text/css" href="/static/ueditor/themes/default/css/ueditor.min.css">-->
 <!--wangEditor style-->
-<link rel="stylesheet" href="css/student/wangEditor.min.css">
-<link rel="stylesheet" href="css/student/UuplodFile.css">
+<link rel="stylesheet" href="{% static 'exam/css/student/wangEditor.min.css' %}">
+<link rel="stylesheet" href="{% static 'exam/css/student/UuplodFile.css' %}">
 
 <!--<script type="text/javascript" src="http://cdn.oss.kaoshixing.com/ksxing_static/jquery.min.js"></script>-->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'exam/js/jquery.min.js' %}"></script>
 
-<!--&lt;!&ndash; customer styles &ndash;&gt;-->
-<!--<style>-->
-<!--.edui-toolbar {line-height: 20px;}-->
-<!--video {width:50%;display:block;margin-left:50px;}-->
-<!--.answers  a {text-decoration: none;color:inherit;cursor:default;}-->
-<!--.pop-test3 span {font-size:24px;}-->
-<!--.modal-dialog {width: 350px;}-->
-<!--.modal-header {background-color: #5d9cec;color: #fff;font-size: 16px;margin: 0px !important;padding: 10px 25px !important;text-align: center;}-->
-<!--.alert-danger{position: fixed;width: 60%;z-index: 1000;top: 40%;left: 20%;text-align: center;padding: 40px;font-size: 30px;border-radius: 15px;color: #fff;background-color: #ff5800;border-color: #fd8100;}-->
-<!--.tip{position: absolute;}-->
-<!--.expanding,.expanding-clone{width: 500px!important;}-->
-<!--.input-group{margin-bottom: 15px;}-->
-<!--#copy {display: inline-block;height: 25px;width: 70px;text-align: center;font-size: 12px;line-height: 25px;color: #333;cursor: pointer;background-color: #eee;border: 1.5px dashed #777;border-radius: 6px;vertical-align: 5px;}-->
-<!--audio {margin: 0 0 -10px 0;}-->
-<!--.questions dl{padding: 30px;}-->
-<!--.edui-default .edui-editor-toolbarbox{position: relative!important;}-->
-<!--.edui-editor div{height: auto!important;}-->
-<!--#webcam{position: fixed;z-index: 9999;}-->
-<!--#webcam .glyphicon-remove{position: absolute;right: 0;font-size: 18px;border: 2px solid #5d9cec;color: #5d9cec;padding: 2px;margin: 3px;z-index: 2;cursor: pointer;}-->
-
-<!--#cams,#loading{position: fixed;z-index: 9998;color: #fff;top: 0;bottom: 0;left: 0;right: 0;}-->
-<!--#cams span{display: inline-block!important;}-->
-<!--.capture-status{font-size: 1.3em;color: #ff5800;margin-left: 150px;opacity: 0;filter: opacity(alpha=0);cursor: pointer;}-->
-<!--.bootstrap-dialog{z-index: 100000001;}-->
-<!--[title_tip]:hover:after{content: attr(title_tip);padding:5px 10px;line-height: 18px;text-align: left;width: 80px!important;margin: 15px 5px;color: #fff;position: absolute;z-index: 20;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;-->
-  <!-- -moz-box-shadow: 0px 0px 4px #222;-webkit-box-shadow: 0px 0px 4px #222;-->
-  <!--box-shadow: 0px 0px 4px #222;-->
-  <!--background-color: #444;opacity: 0.7;filter:alpha(opacity=70);-->
-<!--}-->
-<!--span.ch, .en {-->
-    <!--cursor: pointer;-->
-<!--}-->
-<!--span.devid{-->
-    <!--color: #f7f7f7;-->
-<!--}-->
-<!--div#swichLang {-->
-    <!--position: absolute;-->
-    <!--right: 205px;-->
-    <!--top: 28px;-->
-<!--}-->
-<!--.ch{-->
-    <!--color: #ff5800;-->
-<!--}-->
-<!--.en{-->
-    <!--color: #f7f7f7;-->
-<!--}-->
-<!--</style>-->
 </head>
 
 <body class="main-page answer-style" id="exam_answer" oncontextmenu=self.event.returnValue=false onpaste="return false" oncopy="return false">
@@ -111,11 +66,7 @@
              <div class="l">
              	<span class="time"><em></em><span class="timeDown">00:52:56</span></span>
                 <span class="card"><em></em><a href="javascript:void(0)" class="hasShowCardLink">答题卡</a></span>
-                <!--<span class="fontsize">-->
-                  <!--<button class="btn fontsize-btn fontsize-btn-l" style="position:relative;top:-1px;">- &nbsp;&nbsp;&nbsp;Aa</button>-->
-                  <!--<em></em>-->
-                  <!--<button class="btn fontsize-btn fontsize-btn-r">+</button>-->
-                <!--</span>-->
+
 
              </div>
              <div class="r">
@@ -132,7 +83,6 @@
                 <h5>单选题<span class="qh_detail">共10题，合计100.0分</span></h5>
          </div>
                 <dl class="questionsContent" questionsId="59f1cbb4f92ea176cf6ea485" hasAnswered="false">
-                    <!--////////////////////////////////////////-->
                     <dt>
                     <div class="icon-block">
                         <label class="qIndex"><span class="index">1</span></label>
@@ -301,18 +251,18 @@
 	<img src="../../images/ajax-loader.gif" style="display:none">
 </div>
 <iframe name="fileup_iframe" id="fileupIframe" class="hidden"></iframe>
+    {% static 'exam/' %}
+<script type="text/javascript" src=" {% static 'exam/js/testing/bootstrap.min.js' %}"></script>
 
-<script type="text/javascript" src="js/testing/bootstrap.min.js"></script>
 
-
-<script type="text/javascript" src="js/testing/jquery.webcam.js"></script>
-<script type="text/javascript" src="js/testing/swfobject.js"></script>
-<script type="text/javascript" src="js/testing/json3.js"></script>
-<script type="text/javascript" src="js/testing/jquery.uploadify.min.js"></script>
-<script src="js/testing/stickUp.js"></script>
-<script type="text/javascript" src="js/testing/expanding.js"></script>
-<script type="text/javascript" src="js/testing/screefull.js"></script>
-<script type="text/javascript" src="js/testing/record.js"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/jquery.webcam.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/swfobject.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/json3.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/jquery.uploadify.min.js' %}"></script>
+<script src="{% static 'exam/js/testing/stickUp.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/expanding.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/screefull.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/record.js' %}"></script>
 
 <script type="text/javascript">
     jQuery(function($) {

@@ -21,6 +21,8 @@ import  xadmin
 from users.views import LoginView
 from teacher.views import ItemBankView
 from teacher.views import GradeCountView
+from student.views import ExamView
+from student.views import ExamTestingView
 
 
 urlpatterns = [
@@ -29,6 +31,8 @@ urlpatterns = [
     url('^$', TemplateView.as_view(template_name = "exam/shouye.html"), name = "shouye"),
     url('^login/$', LoginView.as_view(),name = "login"),
     url(r'^captcha/', include('captcha.urls')),
-    url('^login/item-bank/$',ItemBankView.as_view() , name="login/item-bank"),
-    url('^login/grade-count/$',GradeCountView.as_view() , name="login/grade-count"),
+    url('^item-bank/$',ItemBankView.as_view() , name="item-bank"),
+    url('^grade-count/$',GradeCountView.as_view() , name="grade-count"),
+    url('^exam/$',ExamView.as_view() , name="exam"),
+    url('^testing/$',ExamTestingView.as_view() , name="testing"),
 ]
