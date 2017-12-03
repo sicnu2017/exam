@@ -1,0 +1,64 @@
+@charset "utf-8";
+.outer{
+    margin: 50px;
+}
+.setIndex .btn{
+    box-shadow: -1px 8px 6px 5px lightgrey;
+    margin:0px 40px;
+    width: 200px;
+    height: 200px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+}
+.setIndex .iconfont{
+    font-size:30px;
+}
+.outer .btn-container{
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+/*------------新增考试 addNewExam-------------*/
+.addNewExam .container-div{
+    margin:15px 0px;
+}
+.addNewExam{
+    margin: 150px 0px 0px 100px;
+}
+.addNewExam .submit-cancel button{
+    margin:20px;
+}
+/*
+.addNewExam .input-group-addon{
+    color: white;
+    background-color: #337ab7;
+    border: 1px solid #337ab7;
+}*/
+
+/*------------------试卷制作 makePaper-----------------*/
+.makePaper{
+    width: 65%;
+    margin: 50px auto;
+}
+.makePaper .selectionForm,.makePaper .wangEditor-container{
+    width: 83%;
+}
+.makePaper .wangEditor-container{
+    border-radius: 5px;
+}
+.makePaper .quesTitle{
+    margin: 10px 0px;
+}
+.makePaper .selectionForm{
+    padding-left: 0px;
+}
+.makePaper .judgement{
+    display: none;
+}

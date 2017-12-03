@@ -1,0 +1,71 @@
+{% extends "exam/index.html" %}
+{% load staticfiles%}
+
+
+    {% block content %}
+<div id="grade-top">
+    <div class="input-group col-xs-12">
+        <div class="input-group-btn">
+            <select name="type" class="form-control" style="width: auto;">
+                <option value="1">班级</option>
+                <option value="2">姓名</option>
+            </select>
+        </div>
+        <input type="text" name="keyword" id="keyword" class="form-control" placeholder="请您输入班级/姓名">
+        <span class="input-group-btn">
+            <button class="btn btn-success" id="search_submit" type="submit">Go</button>
+        </span>
+    </div>
+    <div id="show_content">
+        <div id="item_tittle">
+            <div class="row">
+                <div class="col-md-2">课程总分：</div>
+                <div class="col-md-2">参考人数：</div>
+                <div class="col-md-2">及格人数：</div>
+                <div class="col-md-2">最高分：</div>
+                <div class="col-md-2">最低分：</div>
+                <div class="col-md-2">平均分：</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">不及格人数：</div>
+                <div class="col-md-2">及格率：</div>
+                <div class="col-md-2">不及格率：</div>
+            </div>
+        </div>
+    </div>
+</div> <!--头-->
+<div id="grade-bottom clear">
+    <div id="grade-div1">
+        <div id="show_content">
+            <div id="item_tittle">
+                <div class="row">
+                    <div class="col-md-2">姓名</div>
+                    <div class="col-md-2">学号</div>
+                    <div class="col-md-2">班级</div>
+                    <div class="col-md-2">成绩</div>
+                    <div class="col-md-2">总排名</div>
+                    <div class="col-md-2">班级排名</div>
+                </div>
+            </div>
+            <div id="item_content">
+                {% for exam in exams %}
+                    <div class="row item">
+                    <div class="col-md-2">{{ exam.student.first_name }}{{ exam.student.last_name }}</div>
+                    <div class="col-md-2">2017100101</div>
+                    <div class="col-md-2">1班</div>
+                    <div class="col-md-2">86</div>
+                    <div class="col-md-2">20</div>
+                    <div class="col-md-2">10</div>
+                </div>
+                {% endfor %}
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="grade-div2">
+         <img data-src="holder.js/400x400" class="img-thumbnail" alt="400x400" style="width: 400px; height: 400px;">
+    </div>
+</div>
+    {% endblock %}

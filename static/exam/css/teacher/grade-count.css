@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+#dropdownDiv{
+    width: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    　　margin-top: 20px;
+}
+#img_btn{
+    position:absolute;
+}
+#dleft{
+    text-align:left;
+}
