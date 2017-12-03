@@ -7,80 +7,34 @@
     <div class="input-group col-xs-12">
         <span class="btn btn-primary">选择课程：</span>
         <div class="input-group-btn">
-            <select name="type" class="form-control" style="width: auto;">
-                <option>python语言</option>
-                <option>软件工程理论</option>
-                <option>数据挖据</option>
-                <option>高级算法</option>
-                <option>软件体系结构</option>
+            <select name="type" class="form-control" style="width: auto;" onchange="window.location=this.value">
+                <option >{% firstof course_name %}</option>
+                {% for course in courses %}
+                    <option value="../{{ course.id }}">{{ course.name }}</option>
+                {% endfor %}
             </select>
         </div>
-        <span class="input-group-btn">
-            <button class="btn btn-success" id="search_submit" type="submit">Go</button>
-        </span>
     </div>
 </div>
 <hr>
 <div id="show_content">
     <div id="item_tittle">
         <div class="row">
-            <div class="col-md-2">课程名称</div>
-            <div class="col-md-3">开始时间</div>
-            <div class="col-md-3">结束时间</div>
-            <div class="col-md-2">
-                <li class="dropdown">
-                    <a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">
-                        审核状态<b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="tutorial">
-                        <li role="presentation"><a href="#">是</a></li>
-                        <li role="presentation"><a href="#">否</a></li>
-                    </ul>
-                </li>
-            </div>
-            <div class="col-md-2">成绩统计</div>
+            <div class="col-md-4">课程名称</div>
+            <div class="col-md-4">考试时间</div>
+            <div class="col-md-4">统计分布</div>
         </div>
     </div>
     <div id="item_content">
-        <div class="row item">
-            <div class="col-md-2">软件工程理论</div>
-            <div class="col-md-3">2016-10-10 09:30</div>
-            <div class="col-md-3">2016-10-10 11:30</div>
-            <div class="col-md-2">是</div>
-            <div class="col-md-2">
-                <a href="grade-everyone"  id="allgradeLink"><button type="button" class="btn btn-xs btn-info">全部成绩</button></a>
-                <a href="grade-count-index" id="gradeLink"><button type="button" class="btn btn-xs btn-info">成绩分布</button></a>
+        {% for exam in exams %}
+            <div class="row item">
+            <div class="col-md-4">{{ exam.course.name }}</div>
+            <div class="col-md-4">{{ exam.add_time }}</div>
+            <div class="col-md-4">
+                <a href="grade-count-index" id="gradeLink"><button type="button" class="btn btn-xs btn-info">查看详情</button></a>
             </div>
         </div>
-        <div class="row item">
-            <div class="col-md-2">数据挖据</div>
-            <div class="col-md-3">2016-10-18 09:30</div>
-            <div class="col-md-3">2016-10-18 11:30</div>
-            <div class="col-md-2">是</div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-xs btn-info">全部成绩</button></li>
-                <button type="button" class="btn btn-xs btn-info">成绩分布</button></li>
-            </div>
-        </div>
-        <div class="row item">
-            <div class="col-md-2">python语言</div>
-            <div class="col-md-3">2016-10-17 09:30</div>
-            <div class="col-md-3">2016-10-17 11:30</div>
-            <div class="col-md-2">是</div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-xs btn-info">全部成绩</button></li>
-                <button type="button" class="btn btn-xs btn-info">成绩分布</button></li>
-            </div>
-        </div>
-        <div class="row item">
-            <div class="col-md-2">高级算法</div>
-            <div class="col-md-3">2016-10-14 08:30</div>
-            <div class="col-md-3">2016-10-14 11:30</div>
-            <div class="col-md-2">否</div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-xs btn-info">全部成绩</button></li>
-                <button type="button" class="btn btn-xs btn-info">成绩分布</button></li>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
     <div id="bottom">

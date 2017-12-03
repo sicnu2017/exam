@@ -29,11 +29,11 @@
                     <a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">
                         题型<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="tutorial">
-                        <li role="presentation"><a href="">单选</a></li>
-                        <li role="presentation"><a href="#">多选题</a></li>
-                        <li role="presentation"><a href="#">判断题</a></li>
-                        <li role="presentation"><a href="#">填空题</a></li>
-                        <li role="presentation"><a href="#">分析题</a></li>
+                        <li role="presentation"><a href="../../1/{% firstof course_id %}">单选题</a></li>
+                        <li role="presentation"><a href="../../2/{% firstof course_id %}">多选题</a></li>
+                        <li role="presentation"><a href="../../3/{% firstof course_id %}">判断题</a></li>
+                        <li role="presentation"><a href="../../4/{% firstof course_id %}">填空题</a></li>
+                        <li role="presentation"><a href="../../5/{% firstof course_id %}">分析题</a></li>
                     </ul>
                 </li>
             </div>
@@ -41,11 +41,11 @@
             <div class="col-md-1">
                 <li class="dropdown">
                     <a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">
-                        难度<b class="caret"></b></a>
+                        课程<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="tutorial">
-                        <li role="presentation"><a href="#">简单</a></li>
-                        <li role="presentation"><a href="#">中等</a></li>
-                        <li role="presentation"><a href="#">困难</a></li>
+                        {% for couse in courses %}
+                            <li role="presentation"><a href="../{{ couse.id }}">{{ couse.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
             </div>
@@ -58,9 +58,9 @@
         {% for choice in mchoices %}
         <div class="row item">
             <div class="col-md-1"><input type="checkbox" value="option1"></div>
-            <div class="col-md-1">选择题</div>
+            <div class="col-md-1">{% firstof questionType %}</div>
             <div class="col-md-4 item_name">{{choice.subject}}</div>
-            <div class="col-md-1">{% if choice.level == 'simple' %}简单{% elif  choice.level == 'medium' %}中等{% else %}困难{% endif %}</div>
+            <div class="col-md-1">{% firstof course_name %}</div>
             <div class="col-md-1">{{ choice.createuser}}</div>
             <div class="col-md-3">{{ choice.add_time }}</div>
             <div class="col-md-1">

@@ -1,1 +1,21 @@
-<h1>考试设置界面</h1>
+
+{% extends "exam/index.html" %}
+{% load staticfiles%}
+
+
+    {% block content %}
+<div class="outer setIndex">
+    <div class="btn-container absolute align-center">
+        <a href="addNewExam.html" id="addNewExam" class="btn btn-primary btn-lg active" role="button">
+            <span class="iconfont icon-xinzeng"></span>
+            <span>新增考试</span>
+        </a>
+        <a href="makePaper.html" id="makePaper" class="btn btn-primary btn-lg active" role="button">
+            <span class="iconfont icon-yuejuanmokuai"></span>
+            <span>试卷制作</span>
+        </a>
+    </div>
+</div>
+    {% endblock %}
+
+

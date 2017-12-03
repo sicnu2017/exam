@@ -20,10 +20,10 @@ import  xadmin
 
 from users.views import LoginView
 from teacher.views import ItemBankView
-from teacher.views import GradeCountView
+from teacher.views import GradeCountView,GradeCountIndexView
 from student.views import ExamView
 from student.views import ExamTestingView
-
+from teacher.views import SetExamView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls, name = "xadmin"),
@@ -31,8 +31,11 @@ urlpatterns = [
     url('^$', TemplateView.as_view(template_name = "exam/shouye.html"), name = "shouye"),
     url('^login/$', LoginView.as_view(),name = "login"),
     url(r'^captcha/', include('captcha.urls')),
-    url('^item-bank/$',ItemBankView.as_view() , name="item-bank"),
-    url('^grade-count/$',GradeCountView.as_view() , name="grade-count"),
+    url('^item-bank/(?P<type>[0-9])/(?P<course_id>[0-9])/$',ItemBankView.as_view() , name="item-bank"),
+    url('^grade-count/(?P<course_id>[0-9])/$',GradeCountView.as_view() , name="grade-count"),
+    url('^grade-index/(?P<exam_id>[0-9]{7})/$',GradeCountIndexView.as_view() , name="grade-index"),
     url('^exam/$',ExamView.as_view() , name="exam"),
     url('^testing/$',ExamTestingView.as_view() , name="testing"),
+    url('^setExam/$',SetExamView.as_view() , name="setExam"),
+
 ]
