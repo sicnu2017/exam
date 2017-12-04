@@ -29,8 +29,37 @@
             <div class="nav-top">
                 <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="{% static 'exam/images/mini.png' %}" ></div>
             </div>
-            <ul class="nav-ul">
+            {% if user.role == 'student' %}
+            <ul>
+                <li class="nav-item">
+                    <a href="/exam"><i class="iconfont icon-kaoshi"></i><span>考试</span><i class="my-icon nav-more"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/grade-search"><i class="iconfont icon-chengjichaxun"></i><span>成绩查询</span><i class="my-icon nav-more"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/update-info"><i class="iconfont icon-ICON"></i><span>个人信息维护</span><i class="my-icon nav-more"></i></a>
+                </li>
             </ul>
+            {% else %}
+            <ul>
+                <li class="nav-item">
+                    <a href="/item-bank/1/1"><i class="iconfont icon-plus-itembank"></i><span>试题库</span><i class="my-icon nav-more"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/setExam"><i class="iconfont icon-jiaoxuebankaoshishezhi"></i><span>考试设置</span><i class="my-icon nav-more"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/marking"><i class="iconfont icon-yuejuanmokuai"></i><span>阅卷</span><i class="my-icon nav-more"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/grade-count"><i class="iconfont icon-chengjitongji"></i><span>成绩统计</span><i class="my-icon nav-more"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/update-info"><i class="iconfont icon-ICON"></i><span>个人信息维护</span><i class="my-icon nav-more"></i></a>
+                </li>
+            </ul>
+            {% endif %}
         </div>
         {% endblock %}
         <div class="fl right">
@@ -46,10 +75,6 @@
         </div>
     </div>
     {% block js %}
-    <script type="text/javascript">
-        var userRole=["{% firstof user.role %}"];
-//        var userRole={{ userRole |safe }};
-    </script>
     <script type="text/javascript" src="{% static 'exam/js/jquery.min.js' %}"></script>
     <script src="{% static 'exam/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'exam/js/nav.js' %}"></script>
