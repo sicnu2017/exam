@@ -58,5 +58,5 @@ class GradeCountIndexView(View):
 
 class SetExamView(View):
     def get(self,request):
-        return render(request, "exam/teacher/setExam.html")
+        return render(request, "exam/setExam.html")
 
