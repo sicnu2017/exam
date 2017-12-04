@@ -80,7 +80,6 @@ class CompletionProfile(models.Model):
      def __str__(self):
          return self.subject
 # #分析题试题表
-<<<<<<< HEAD
 # class AnalysisProfile(models.Model):
 #     subject = models.CharField(max_length=128, verbose_name=u"题目")
 #     answer = models.CharField(max_length=128, verbose_name=u"参考答案", blank=True)
@@ -97,7 +96,6 @@ class CompletionProfile(models.Model):
 #         return self.subject
 
 #ceshi20171130
-=======
 class AnalysisProfile(models.Model):
     subject = models.CharField(max_length=128, verbose_name=u"题目")
     answer = models.CharField(max_length=128, verbose_name=u"参考答案", blank=True)
@@ -164,4 +162,3 @@ class ExamProfile(models.Model):
         verbose_name_plural = verbose_name
     def __str__(self):
         return self.subject
->>>>>>> refs/remotes/origin/master
