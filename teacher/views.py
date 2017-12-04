@@ -7,6 +7,7 @@ from django.views.generic import  View
 from .models import MchoiceProfile,MoremchoiceProfile,JudgmentProfile,CompletionProfile,AnalysisProfile,CourseProfile
 from .models import ExamProfile,ExamGradeCountProfile
 
+#测试
 class ItemBankView(View):
     def get(self,request,type,course_id):
         course = CourseProfile.objects.filter(id=course_id)

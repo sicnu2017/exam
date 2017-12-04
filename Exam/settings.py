@@ -26,7 +26,7 @@ SECRET_KEY = '5g=+%%%mbvs4h--1s!lh&w87e4wjh@(_zt3ctja(1h&8d&(dxo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -110,6 +110,12 @@ DATABASES = {
         'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '3306',
+        # 'DATABASE_ENGINE' : 'oracle',
+        # 'DATABASE_NAME' : 'YUYOU',
+        # 'DATABASE_USER' : 'system',
+        # 'DATABASE_PASSWORD' : 'yu13882573563',
+        # 'DATABASE_HOST' : 'localhost',
+        # 'DATABASE_PORT' : '1521',
     }
 }
 

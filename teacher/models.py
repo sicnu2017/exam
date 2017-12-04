@@ -80,6 +80,22 @@ class CompletionProfile(models.Model):
      def __str__(self):
          return self.subject
 # #分析题试题表
+# class AnalysisProfile(models.Model):
+#     subject = models.CharField(max_length=128, verbose_name=u"题目")
+#     answer = models.CharField(max_length=128, verbose_name=u"参考答案", blank=True)
+#     level = models.CharField(max_length=12, choices=(("simple", u"简单"), ("medium", u"中等"), ("hard", u"困难")),default='simple', verbose_name=u"难易度")
+#     value = models.DecimalField(max_digits=2, decimal_places=1, verbose_name=u"分值", blank=True)
+#     createuser = models.ForeignKey(UserProfile, blank=True, verbose_name=u"创建人")
+#     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"增加时间")
+#
+#     class Meta:
+#         verbose_name = u"分析题"
+#         verbose_name_plural = verbose_name
+#
+#     def __str__(self):
+#         return self.subject
+
+#ceshi20171130
 class AnalysisProfile(models.Model):
     subject = models.CharField(max_length=128, verbose_name=u"题目")
     answer = models.CharField(max_length=128, verbose_name=u"参考答案", blank=True)
