@@ -61,3 +61,7 @@ class SetExamView(View):
     def get(self,request):
         return render(request, "exam/setExam.html")
 
+class MarkingView(View):
+    def get(self,request):
+        return render(request, "exam/marking.html")
+

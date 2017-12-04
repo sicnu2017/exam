@@ -32,13 +32,13 @@
             {% if user.role == 'student' %}
             <ul>
                 <li class="nav-item">
-                    <a href="/exam"><i class="iconfont icon-kaoshi"></i><span>考试</span><i class="my-icon nav-more"></i></a>
+                    <a href="{% url 'exam' %}"><i class="iconfont icon-kaoshi"></i><span>考试</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="/grade-search"><i class="iconfont icon-chengjichaxun"></i><span>成绩查询</span><i class="my-icon nav-more"></i></a>
+                    <a href="{% url 'grade-search' %}"><i class="iconfont icon-chengjichaxun"></i><span>成绩查询</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="/update-info"><i class="iconfont icon-ICON"></i><span>个人信息维护</span><i class="my-icon nav-more"></i></a>
+                    <a href="{% url 'update-info' %}"><i class="iconfont icon-ICON"></i><span>个人信息维护</span><i class="my-icon nav-more"></i></a>
                 </li>
             </ul>
             {% else %}
@@ -47,16 +47,16 @@
                     <a href="/item-bank/1/1"><i class="iconfont icon-plus-itembank"></i><span>试题库</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="/setExam"><i class="iconfont icon-jiaoxuebankaoshishezhi"></i><span>考试设置</span><i class="my-icon nav-more"></i></a>
+                    <a href="{% url 'setExam' %}"><i class="iconfont icon-jiaoxuebankaoshishezhi"></i><span>考试设置</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="/marking"><i class="iconfont icon-yuejuanmokuai"></i><span>阅卷</span><i class="my-icon nav-more"></i></a>
+                    <a href="{% url 'marking' %}"><i class="iconfont icon-yuejuanmokuai"></i><span>阅卷</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
                     <a href="/grade-count/1"><i class="iconfont icon-chengjitongji"></i><span>成绩统计</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="/update-info"><i class="iconfont icon-ICON"></i><span>个人信息维护</span><i class="my-icon nav-more"></i></a>
+                    <a href="{% url 'update-info' %}"><i class="iconfont icon-ICON"></i><span>个人信息维护</span><i class="my-icon nav-more"></i></a>
                 </li>
             </ul>
             {% endif %}
