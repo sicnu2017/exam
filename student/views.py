@@ -10,3 +10,7 @@ class ExamView(View):
 class ExamTestingView(View):
     def get(self,request):
         return render(request, "exam/testing.html")
+
+class GradeSearchView(View):
+    def get(self,request):
+        return render(request, "exam/grade-search.html")

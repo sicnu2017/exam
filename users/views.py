@@ -53,20 +53,10 @@ class LoginView(View):
         else:
             return render(request, "exam/login.html", {'captcha':captcha,"msg": "用户名或密码错误！"})
 
+class UpdataInfoView(View):
+    def get(self,request):
+        return render(request, "exam/update-info.html")
 
 
 
-# Create your views here.
-# def user_login(request):
-#     if request.method == "POST": #判断请求方式
-#         user_name = request.POST.get("username","")
-#         pass_word = request.POST.get("password","")
-#         user = authenticate(username=user_name,password=pass_word) #向数据库验证，必须使用username,password来登录
-#         if user is not None:
-#             login(request,user)
-#             return render(request,"index.html")
-#         else:
-#             return render(request,"login.html",{"msg":"用户名或密码错误！"})
-#     elif request.method == "GET":
-#         return  render(request,"login.html",{})
 
