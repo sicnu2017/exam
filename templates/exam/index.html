@@ -11,13 +11,33 @@
     <link rel="stylesheet" href="{% static 'exam/font/iconfont.css' %}">
     <link rel="stylesheet" href="{% static 'exam/css/frame.css' %}">            <!--框架样式-->
 
-     <!-- Bootstrap -->
-    <link href="{% static 'exam/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--lay ui-->
+    <link rel="stylesheet" href="{% static 'exam/layui/css/layui.css' %}">
+    <!--jQuery UI-->
+    <link rel="stylesheet" href="{% static 'exam/css/jquery-ui.min.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'exam/css/bootstrap.min.css' %}">
     <!--试题库样式-->
-    <link href="{% static 'exam/css/teacher/itemBank.css' %}" rel="stylesheet">
-    <link href="{% static 'exam/css/teacher/setExam.css' %}" rel="stylesheet">
-    <link href="{% static 'exam/css/teacher/grade-count.css' %}" rel="stylesheet">
-    <link href="{% static 'exam/css/teacher/grade-count-index.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/itemBank.css' %}" >
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/itemBankManual.css' %}" >
+
+    <!--考试设置样式-->
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/setExam.css' %}" >
+
+    <!--引入wangEditor.css-->
+    <link rel="stylesheet" href="{% static 'exam/js/wangEditor/dist/css/wangEditor.min.css' %}">
+
+     <!--成绩统计样式-->
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/grade-count.css' %}">
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/grade-count-index.css' %}">
+
+    <!--教师阅卷样式-->
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/marking.css' %}">
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/marking_sub.css' %}" >
+    <!--成绩统计样式-->
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/grade-count.css' %}" >
+    <link rel="stylesheet" href="{% static 'exam/css/teacher/grade-count-index.css' %}" >
+     <!--成绩查询样式-->
     <link rel="stylesheet" href="{% static 'exam/css/student/grade-search.css' %}">
 
 </head>
@@ -44,7 +64,7 @@
             {% else %}
             <ul>
                 <li class="nav-item">
-                    <a href="/item-bank/1/1"><i class="iconfont icon-plus-itembank"></i><span>试题库</span><i class="my-icon nav-more"></i></a>
+                    <a href="/item-bank/1/1"><i class="iconfont icon-shitiku"></i><span>试题库</span><i class="my-icon nav-more"></i></a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'setExam' %}"><i class="iconfont icon-jiaoxuebankaoshishezhi"></i><span>考试设置</span><i class="my-icon nav-more"></i></a>
@@ -75,13 +95,24 @@
         </div>
     </div>
     {% block js %}
-    <script type="text/javascript" src="{% static 'exam/js/jquery.min.js' %}"></script>
-    <script src="{% static 'exam/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'exam/js/nav.js' %}"></script>
-    <script type="text/javascript" src="{% static 'exam/js/index.js' %}"></script>
-    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
-    <script src="{% static 'exam/js/item-bank.js' %}"></script>
-    <script src="{% static 'exam/js/grade-count.js}"></script>
+        <script src="{% static 'exam/js/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'exam/js/jquery-ui-1.12.1.min.js' %}"></script>
+        <script src="{% static 'exam/layui/layui.js' %}"></script>
+        <script src="{% static 'exam/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+        <!--wangEditor特效-->
+        <script src="{% static 'exam/js/wangEditor/dist/js/wangEditor.min.js' %}"></script>
+        <!--导航-->
+        <script src="{% static 'exam/js/nav.js' %}"></script>
+        <!--主页-->
+        <script src="{% static 'exam/js/index.js' %}"></script>
+        <!--试题库-->
+        <script src="{% static 'exam/js/item-bank.js' %}"></script>
+        <!--成绩统计-->
+        <script src="{% static 'exam/js/grade-count.js' %}"></script>
+        <!--阅卷-->
+        <script src="{% static 'exam/js/marking.js' %}"></script>
+        <!--考试设置-->
+        <script src="{% static 'exam/js/setExam.js' %}"></script>
     {% endblock %}
 </body>
 {% endblock %}

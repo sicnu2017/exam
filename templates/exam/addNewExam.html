@@ -1,0 +1,65 @@
+
+{% extends "exam/index.html" %}
+{% load staticfiles%}
+
+
+    {% block content %}
+<div class="outer addNewExam col-xs-8 col-md-8 col-md-8">
+    <div class="align-center">
+        <!--表单信息-->
+        <form class=" clearfix">
+            <div class="form-group">
+                <div class="container-div">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-primary">考试时间</span>
+                        <input type="text" class="form-control" id="examTime" >
+                    </div>
+                </div>
+                <div class="container-div">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-primary">考试班级</span>
+                        <select class="form-control">
+                            <option>2014级</option>
+                            <option>2015级</option>
+                            <option>2016级</option>
+                            <option>2017级</option>
+                        </select>
+                        <!--<span class="input-group-addon bg-primary">专业</span>-->
+                        <select class="form-control" id="majorSelect">
+                            <option class="majorOpt" value="计算机科学与技术(1班)">计算机科学与技术(1班)</option>
+                            <option class="majorOpt" value="计算机科学与技术(2班)">计算机科学与技术(2班)</option>
+                            <option class="majorOpt" value="网络工程">网络工程</option>
+                            <option class="majorOpt" value="软件工程">软件工程</option>
+                            <option class="majorOpt" value="电子商务">电子商务</option>
+                            <option class="majorOpt" value="教育技术">教育技术</option>
+                        </select>
+                    </div>
+                </div>
+               <div class="container-div">
+                   <div class="input-group">
+                       <span class="input-group-addon">考试科目</span>
+                       <select class="form-control">
+                           <option>c语言</option>
+                           <option>数据结构</option>
+                           <option>数据库</option>
+                           <option>Java</option>
+                       </select>
+                   </div>
+               </div>
+            </div>
+        </form>
+    </div>
+
+    <!--按钮信息-->
+    <div class="submit-cancel align-center">
+        <button type="button" class="btn btn-danger" id="cancelBtn">
+            <span class="glyphicon glyphicon-remove"></span>
+            <span>取消</span>
+        </button>
+        <button type="button" class="btn btn-primary" id="commitBtn">
+            <span class="glyphicon glyphicon-ok"></span>
+            <span>提交</span>
+        </button>
+    </div>
+</div>
+    {% endblock %}

@@ -65,3 +65,6 @@ class MarkingView(View):
     def get(self,request):
         return render(request, "exam/marking.html")
 
+class AddNewExamView(View):
+    def get(self,request):
+        return render(request, "exam/addNewExam.html")

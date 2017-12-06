@@ -9,6 +9,20 @@ header,section{
 .clear{
     content: "";
     display: block;
+    background: white;
+}
+
+.align-center{
+    text-align: center;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position:relative;
+}
+.nav-item>a:hover{
+    text-decoration: none;
 }
 /*-----------导航-----------*/
 .nav{
