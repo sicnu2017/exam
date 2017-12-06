@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.views.generic import  View
 # Create your views here.
 from .models import MchoiceProfile,MoremchoiceProfile,JudgmentProfile,CompletionProfile,AnalysisProfile,CourseProfile
-from .models import ExamProfile,ExamGradeCountProfile
+from .models import ExamProfile
 
 #测试
 class ItemBankView(View):

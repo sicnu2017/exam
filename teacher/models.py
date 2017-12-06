@@ -43,6 +43,8 @@ class MchoiceProfile(models.Model):
 
     def __str__(self):
         return self.subject
+
+
 #判断题试题表
 class JudgmentProfile(models.Model):
     subject = models.CharField(max_length=128, verbose_name=u"题目")
@@ -60,8 +62,8 @@ class JudgmentProfile(models.Model):
     def __str__(self):
         return self.subject
 
-# 填空题试题表
 
+# 填空题试题表
 class CompletionProfile(models.Model):
      subject = models.CharField(max_length=128, verbose_name=u"题目")
      answerA = models.CharField(max_length=32, verbose_name=u"第一空答案", blank=True)
@@ -79,23 +81,8 @@ class CompletionProfile(models.Model):
 
      def __str__(self):
          return self.subject
-# #分析题试题表
-# class AnalysisProfile(models.Model):
-#     subject = models.CharField(max_length=128, verbose_name=u"题目")
-#     answer = models.CharField(max_length=128, verbose_name=u"参考答案", blank=True)
-#     level = models.CharField(max_length=12, choices=(("simple", u"简单"), ("medium", u"中等"), ("hard", u"困难")),default='simple', verbose_name=u"难易度")
-#     value = models.DecimalField(max_digits=2, decimal_places=1, verbose_name=u"分值", blank=True)
-#     createuser = models.ForeignKey(UserProfile, blank=True, verbose_name=u"创建人")
-#     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"增加时间")
-#
-#     class Meta:
-#         verbose_name = u"分析题"
-#         verbose_name_plural = verbose_name
-#
-#     def __str__(self):
-#         return self.subject
 
-#ceshi20171130
+
 class AnalysisProfile(models.Model):
     subject = models.CharField(max_length=128, verbose_name=u"题目")
     answer = models.CharField(max_length=128, verbose_name=u"参考答案", blank=True)
@@ -111,6 +98,7 @@ class AnalysisProfile(models.Model):
 
     def __str__(self):
         return self.subject
+
 
 #多选择题试题表
 class MoremchoiceProfile(models.Model):
@@ -135,15 +123,21 @@ class MoremchoiceProfile(models.Model):
     def __str__(self):
         return self.subject
 
-#每场考试成绩
-class ExamGradeCountProfile(models.Model):
-    student = models.ForeignKey(UserProfile, blank=True, verbose_name=u"创建人")
-    exam_id = models.CharField(max_length=64, verbose_name=u"考试ID", blank=True)
-    gradecount = models.IntegerField(verbose_name=u"考试成绩", blank=True)
+
+
+#试卷信息模型
+class TestProfile(models.Model):
+    mchoice_id = models.CharField(max_length=128, verbose_name=u'单选题ID', blank= True)
+    moremchoice_id = models.CharField(max_length=128, verbose_name=u'多选题ID', blank= True)
+    judgment_id = models.CharField(max_length=128, verbose_name=u'判断题ID', blank= True)
+    completion_id = models.CharField(max_length=128, verbose_name=u'填空题ID', blank= True)
+    analysis_id = models.CharField(max_length=128, verbose_name=u'分析题ID', blank= True)
+    create_user = models.ForeignKey(UserProfile, blank=True, verbose_name=u'创建人')
+    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"增加时间")
 
     class Meta:
-        db_table = u"ExamGradeCountProfile"
-        verbose_name = u"考试成绩"
+        db_table = u"TestProfile"
+        verbose_name = u"试卷信息"
         verbose_name_plural = verbose_name
     def __str__(self):
         return self.subject
@@ -153,8 +147,10 @@ class ExamGradeCountProfile(models.Model):
 class ExamProfile(models.Model):
     course = models.ForeignKey(CourseProfile, blank=True, verbose_name=u"课程名")
     createuser = models.ForeignKey(UserProfile, blank=True, verbose_name=u"创建人")
+    test_id = models.ForeignKey(TestProfile, blank=True, verbose_name=u'试卷ID')
+    start_time = models.DateTimeField(blank=True, verbose_name=u'开始时间')
+    end_time = models.DateTimeField(blank=True, verbose_name=u'结束时间')
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"增加时间")
-    exam_id = models.CharField(max_length=64, verbose_name=u"考试ID", blank=True)
 
     class Meta:
         db_table = u"ExamProfile"
@@ -162,3 +158,9 @@ class ExamProfile(models.Model):
         verbose_name_plural = verbose_name
     def __str__(self):
         return self.subject
+
+
+
+
+
+
