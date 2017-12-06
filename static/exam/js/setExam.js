@@ -2,15 +2,15 @@
  * Created by Wang on 2017/11/27.
  */
 /*-----------------------------setExam----------------------------------*/
-$(document).on("click", "#addNewExam",function(e){
-    e=window.event || e;
-    e.preventDefault();
-    var href=$(this).attr("href");
-    var url=""+href;
-    $.get(url).done(function(response){
-        $("#content").html(response);
-    });
-});
+// $(document).on("click", "{% url 'addNewExam' %}",function(e){
+//     e=window.event || e;
+//     e.preventDefault();
+//     var href=$(this).attr("href");
+//     var url=""+href;
+//     $.get(url).done(function(response){
+//         $("#content").html(response);
+//     });
+// });
 $(document).on("click","#makePaper",function(e){
     e=window.event || e;
     e.preventDefault();
