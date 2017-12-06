@@ -26,7 +26,7 @@ from student.views import ExamTestingView
 from teacher.views import SetExamView
 from users.views import UpdataInfoView
 from student.views import GradeSearchView
-from teacher.views import MarkingView
+from teacher.views import MarkingView,AddNewExamView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls, name = "xadmin"),
@@ -43,5 +43,6 @@ urlpatterns = [
     url('^update-info/$',UpdataInfoView.as_view() , name="update-info"),
     url('^grade-search/$',GradeSearchView.as_view() , name="grade-search"),
     url('^marking/$',MarkingView.as_view() , name="marking"),
+    url('^addNewExam/$',AddNewExamView.as_view() , name="addNewExam"),
 
 ]
