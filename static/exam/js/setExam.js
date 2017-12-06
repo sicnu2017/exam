@@ -2,15 +2,15 @@
  * Created by Wang on 2017/11/27.
  */
 /*-----------------------------setExam----------------------------------*/
-$(document).on("click", "#addNewExam",function(e){
-    e=window.event || e;
-    e.preventDefault();
-    var href=$(this).attr("href");
-    var url=""+href;
-    $.get(url).done(function(response){
-        $("#content").html(response);
-    });
-});
+// $(document).on("click", "#addNewExam",function(e){
+//     e=window.event || e;
+//     e.preventDefault();
+//     var href=$(this).attr("href");
+//     var url=""+href;
+//     $.get(url).done(function(response){
+//         $("#content").html(response);
+//     });
+// });
 $(document).on("click","#makePaper",function(e){
     e=window.event || e;
     e.preventDefault();
@@ -19,12 +19,28 @@ $(document).on("click","#makePaper",function(e){
     });
 })
 /*-----------------------------addNewExam-----------------------------------------*/
-$(document).on("focus","#examTime",function(e){
-    $( "#examTime" ).datepicker({
-        altField: "#actualDate",
-        buttonImageOnly: true,
-        dateFormat: "yy-mm-dd"
+layui.use('laydate', function() {
+        var laydate1 = layui.laydate;
+        var laydate2 = layui.laydate;
+        console.log("click");
+        laydate1.render({
+            elem: '#examStartTime',
+            type: 'datetime'
+         });
+        laydate2.render({
+            elem: '#examEndTime',
+            type: 'datetime'
+         });
+
     });
+$(document).on("load","#examStartTime",function(e){
+    //日期时间范围
+    console.log("click");
+
+});
+$(document).on("click","#examEndTime",function(e){
+   //日期时间范围
+    console.log("click2");
 });
 $(document).on("click",".majorOpt",function(e){
     var e=window.event||ev;
