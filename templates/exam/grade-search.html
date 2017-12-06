@@ -2,52 +2,40 @@
 {% load staticfiles%}
 
 
-    {% block content %}
-<div class="dropdown clear" >
-    <div class="search relative fr">
-        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-            全部
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2013年至2014年第一学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2013年至2014年第二学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2014年至2015年第一学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2014年至2015年第二学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2015年至2016年第一学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2015年至2016年第二学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2016年至2017年第一学期</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">2016年至2017年第二学期</a>
-            </li>
-        </ul>
-    </div>
+{% block content %}
+    <div class="dropdown search_position " >
 
-    <div class="search fr">
-        <button type="button" class="btn btn-default" >搜索</button>
-    </div>
+    <div class="input-group relative  position-magin">
+        <div class="input-group-btn relative sizeWith ">
+            <select name="type" class="form-control sizeWith">
+                <option>大学一年级上学期</option>
+                <option>大学一年级下学期</option>
+                <option>大学二年级上学期</option>
+                <option>大学二年级下学期</option>
+                <option>大学三年级上学期</option>
+                <option>大学三年级下学期</option>
+                <option>大学四年级上学期</option>
+                <option>大学四年级下学期</option>
+            </select>
+        </div>
 
-    <div class="search fr" >
-        <form class="bs-example bs-example-form" role="form">
+        <span class="input-group-btn relative">
+            <button class="btn btn-primary" id="search_submit" type="submit">确定</button>
+        </span>
+        <form class="bs-example bs-example-form  placehoder_margin_left relative" role="form">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="请输入课程名称">
+                <input type="text" class="form-control sizeWith" placeholder="  请输入课程名称">
             </div>
         </form>
+        <span class="input-group-btn sizeWith-search relative">
+            <button class="btn btn-primary " id="search_name_submit " type="submit">搜索</button>
+        </span>
+        <!--<span class="btn btn-primary relative"></span>-->
     </div>
+
+    <!--<div class="search fr">-->
+        <!--<button type="button" class="btn btn-default" >搜索</button>-->
+    <!--</div>-->
 
 </div>
 
@@ -111,6 +99,19 @@
             <li>分</li>
         </ul>
     </div>
+
+    <div class="shujutow fl">
+        <dl>
+            <dt>科目： 高等数学</dt>
+            <dt>老师： 汪裕才老师</dt>
+            <dt>总分： 100分</dt>
+        </dl>
+        <ul>
+            <h2>     90</h2>
+            <li>分</li>
+        </ul>
+    </div>
 </div>
+
 
 {% endblock %}

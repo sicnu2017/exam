@@ -6,8 +6,7 @@
 .fr{
     float:right;
 }
-.inline-bloc
-.k{
+.inline-block{
     display: inline-block;
 }
 .clear:after{
@@ -20,30 +19,61 @@
 }
 
 /*--------------*/
+.search_position{
+    margin-top: 50px;
+}
+
 .gradesearch{
     margin: 5px 1% 0px 0px;
 }
+.position-magin{
+    margin-left: 40px;
+}
+.sizeWith{
+    /*width: auto;*/
+    width:200px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.sizeWith-search{
+    width: 172px;
+    padding-right: 600px;
+}
+.placehoder_margin_left{
+    margin-left: 38px;
+}
 .shujutow{
-    width: 215px;
+    width: 180px;
     border-radius: 3px;
-    background-color: #D0D0D0;
-    height: 215px;
+    background-color: #337ab7;
+    /*background-color: #ABB1B7;*/
+    height: 180px;
     overflow: hidden;
     color: #fff;
-    margin-top: 30px;
-    margin-left: 30px
+    margin-top: 20px;
+    margin-left: 40px
 }
 .shujutow dl{
-    padding: 10px 0 0 35px;
+    padding: 10px 10px 0 35px;
     line-height: 33px;
-    color: #fff
+    color: #fff;
+    margin-bottom: 10px;
+
+    margin-top: 10px;
+
+
 }
 .shujutow dt{
     font-weight: 400
 }
 .shujutow ul{
-    background: #c7c7c7 ;
-    height: 100px
+    /*background: #1Ca2bb ;*/
+    background: #337a99;
+    /*background-color:  rgba(0,0,0,.1);*/
+    height: 80px;
+    margin-bottom: 0px;
+
 }
 .shujutow h2{
     font-size: 50px;

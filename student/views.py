@@ -5,6 +5,7 @@ from django.views.generic import  View
 
 class ExamView(View):
     def get(self,request):
+        if user is
         return render(request, "exam/exam.html")
 
 class ExamTestingView(View):

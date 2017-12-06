@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+#nav_btn{
+    height: 50px;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-top:45px;
+    padding-left: 10px;
+}
+
+#content_block{
+    background: #e4e4e463;
+}
+
+#tittle_block{
+    width: 1000px;
+    padding-top: 20px;
+    margin-left: 45px;
+    padding-bottom: 45px;
+}
+
+#quesType{
+    width: 125px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+#quesDegree{
+    width:80px;
+    float: left;
+}
+
+#typeLbl{
+    float: left;
+    color: #0d78d4;
+    margin-left: 20px;
+}
+
+#degreeLbl{
+    float: left;
+    margin-left: 30px;
+    color: #0d78d4;
+}
+
+.tittle{
+    padding-top: 45px;
+    margin-left: 45px;
+}
+
+.ansItem{
+    margin-bottom: 20px;
+}
+
+.tip{
+    padding: 5px 14px;
+    background: #41a7ffba;
+    font-size: 12px;
+    margin-right: 12px;
+    color: #fff;
+}
+
+.intro{
+    color: #626467;
+}
+
+#answer_block{
+    width: 1000px;
+    margin-left: 45px;
+    padding-bottom: 40px;
+}
+
+.judgement{
+    display: none;
+}
+
+.selection{
+
+}

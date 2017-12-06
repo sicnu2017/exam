@@ -2,7 +2,11 @@
  * Created by Wang on 2017/11/27.
  */
 /*-----------------------------setExam----------------------------------*/
+<<<<<<< HEAD
 // $(document).on("click", "#addNewExam",function(e){
+=======
+// $(document).on("click", "{% url 'addNewExam' %}",function(e){
+>>>>>>> 249aabc703ec99f28f10f4b04745c0ec0e9d09c2
 //     e=window.event || e;
 //     e.preventDefault();
 //     var href=$(this).attr("href");

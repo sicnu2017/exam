@@ -42,6 +42,13 @@ header,section{
     opacity:1;
     transition: all .3s;
 }
+
+.nav-item a{
+    font-size: 17px;
+}
+.nav-item .iconfont{
+    font-size: 20px;
+}
 /*-----------顶部-------------*/
 .right{
     width: 85%;
