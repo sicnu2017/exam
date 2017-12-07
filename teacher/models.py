@@ -7,10 +7,12 @@ from users.models import UserProfile
 
 
 
+
 # Create your models here.
 
 class CourseProfile(models.Model):
     name = models.CharField(max_length=128, verbose_name=u"课程名")
+    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"增加时间")
 
     class Meta:
         db_table = u"CourseProfile"
@@ -18,7 +20,7 @@ class CourseProfile(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.subject
+        return self.name
 
 
 #选择题试题表
@@ -140,7 +142,7 @@ class TestProfile(models.Model):
         verbose_name = u"试卷信息"
         verbose_name_plural = verbose_name
     def __str__(self):
-        return self.subject
+        return self.id
 
 
 #每场考试模型
@@ -157,7 +159,7 @@ class ExamProfile(models.Model):
         verbose_name = u"考试列表"
         verbose_name_plural = verbose_name
     def __str__(self):
-        return self.subject
+        return self.id
 
 
 
