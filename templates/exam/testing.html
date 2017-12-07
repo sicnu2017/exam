@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>考试云平台</title>
+<title>考试</title>
 <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,27 +11,21 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<!-- Le styles -->
+
 <link rel="stylesheet" type="text/css" href="{% static 'exam/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'exam/css/student/testing/uploadify.css' %}">
 <link rel="stylesheet" type="text/css" href=" {% static 'exam/css/student/testing/style.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'exam/css/student/testing.css' %}">
-<!--<link rel="stylesheet" type="text/css" href="/static/ueditor/themes/default/css/ueditor.min.css">-->
-<!--wangEditor style-->
 <link rel="stylesheet" href="{% static 'exam/css/student/wangEditor.min.css' %}">
 <link rel="stylesheet" href="{% static 'exam/css/student/UuplodFile.css' %}">
 
-<!--<script type="text/javascript" src="http://cdn.oss.kaoshixing.com/ksxing_static/jquery.min.js"></script>-->
-    <script type="text/javascript" src="{% static 'exam/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/jquery.min.js' %}"></script>
 
 </head>
 
 <body class="main-page answer-style" id="exam_answer" oncontextmenu=self.event.returnValue=false onpaste="return false" oncopy="return false">
 
-<!--<input type="text" id="exam_results_id_for_test" value="3494085" class="hidden">-->
-<!--<div id="loading">-->
-    <!--<img src='../../images/icon_loading.gif' style="position:absolute;top: 30%;left: 40%;width:250px;border-radius: 30px;box-shadow: 2px 2px 5px #ccc;"/>-->
-<!--</div>-->
+
 <div class="alert alert-danger" role="alert" style="display:none"></div>
 <div id="webcam">
     <span class="glyphicon glyphicon-remove" aria-hidden="true">
@@ -137,7 +131,7 @@
                 <!-- onclick="sb(this)"-->
              </dd>
     </span>
-<!--////////////////////////////////////////-->
+
                     <dt>
                     <div class="icon-block">
                         <label class="qIndex"><span class="index">2</span></label>
@@ -355,12 +349,12 @@ window.onload=function() {
         setTimeout("timeDown()",1000);
     }
 </script>
-<script type="text/javascript" src="js/testing/basic.js?v=201703021644"></script>
-<script type="text/javascript" src="js/testing/bootstrap-dialog.min.js"></script>
-<script type="text/javascript" src="js/testing/exam_answer.js?ver=201709081226"></script>
-<script type="text/javascript" src="js/testing/wangEditor.js"></script>
-<script type="text/javascript" src="js/testing/uploadFile.js"></script>
-<script type="text/javascript" src="js/testing/admin_main.js"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/basic.js?v=201703021644' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/bootstrap-dialog.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/exam_answer.js?ver=201709081226' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/wangEditor.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/uploadFile.js' %}"></script>
+<script type="text/javascript" src="{% static 'exam/js/testing/admin_main.js' %}"></script>
 <script>
     $(function () {
         $(document).on('contextmenu copy', function () {

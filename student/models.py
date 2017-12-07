@@ -8,7 +8,8 @@ from teacher.models import ExamProfile
 
 class StudentExam(models.Model):
     exam_id = models.ForeignKey(ExamProfile, verbose_name=u'考试ID')
-    user_id =models.ForeignKey(UserProfile, verbose_name=u'参考学生ID')
+    user_id = models.ForeignKey(UserProfile, verbose_name=u'参考学生ID')
+    is_completed = models.BooleanField(default=False, verbose_name=u'考试是否完成')
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"增加时间")
 
     class Meta:
